@@ -1,0 +1,90 @@
+Notes for paralytic facial-:
+
+1) Review on facial-recognition-based applications in disease diagnosis(cited-6)
+a) image is first preprocessed for further normalization.
+b) After detection, facial phenotypes are extracted based on knowledge, statistical analysis, or deep learning [1]. Then, similarity is calculated by matching these features to the database.
+c)Facial recognition algorithms are categorized into the appearance-based method, the local-feature-based method, and deep learning.
+d)Traditional Methods- It extracts global features and matches the holistic face to the database,
+e) algorithms-Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA), Discriminant Common Vectors (DCV), and Independent Component Analysis (ICA) are common algorithms,Support Vector Machine (SVM) is often utilized to accomplish feature discrimination. SVM optimizes the performance of PCA and ICA.
+f) Mature Software-OpenFace 2.0 is an open-source facial behavior analysis tool available to users and researchers. Its framework includes facial landmark detection, head pose tracking, eye gaze, and facial action unit recognition [24]. 
+
+
+
+2) Facial Paralysis Detection on Images Using Key Point Analysis(cited-26)
+a)In this work, a methodology to detect facial paralysis in a face photograph is proposed.
+b)A system consisting of three modules—facial landmark extraction, facial measure computation, and facial paralysis classification—was designed.
+c)Our facial measures aim to identify asymmetry levels within the face elements using facial landmarks, and a binary classifier based on a multi-layer perceptron approach provides an output label.
+d) The Weka suite was selected to design the classifier and implement the learning algorithm.
+e)model-Their model, called the MEEshape predictor, is publicly available for testing and comparison
+f)existing-models=This was especially so if comparing the results with two of the available OpenCV implementations [13]: the LBF model [14] or the Kazemi model [15].
+g)Guarin proposed=
+Convert the color input image to gray scale.
+Resize the gray image using an scale factor 
+Detect the face on the resized image using the publicly available dlib libraries.
+Re-scale the detected face area using 𝑠𝑓
+Predict the facial landmarks on the re-scaled face area.
+Store the extracted data for future data processing.
+
+
+
+
+
+
+
+
+
+3) Unobtrusive pain monitoring in older adults with dementia using pairwise and contrastive training(cited-22)
+a)First, we develop a deep learning-based computer vision system for detecting painful facial expressions on a video dataset that is collected unobtrusively from older adult participants with and without dementia
+b)Datasets=UNBC-McMaster,the X-ITE database [12] and the BioVid Emo DB,BioVid Heat Pain Database
+c)The PACSLAC-II=
+d)Model=used features derived from an active appearance model (AAM) to train a Support Vector Machine (SVM) classifier. They performed pain detection (binary classification) both per-frame and for a sequence of frames.
+e) Pre-trained model and demo code available at https://github.com/TaatiTeam/pain_detection_demo.
+
+
+4)A store-and-forward cloud-based telemonitoring system for automatic assessing dysarthria evolution in neurological diseases from video-recording analysis(imp)
+a)this work presents a store-and-forward self-service telemonitoring system that integrates, within its cloud architecture, a convolutional neural network (CNN) for analyzing video recordings acquired by individuals with dysarthria
+b)This architecture – called facial landmark Mask RCNN – aims at locating facial landmarks as a prior for assessing the orofacial functions related to speech and examining dysarthria evolution in neurological diseases.
+c)
+d)
+e)
+
+
+5) Automated Temporal Segmentation of Orofacial Assessment Videos
+a)Two approaches for repetition detection and parsing were examined: one based on engineered features from tracked facial landmarks and peak detection in the distance between the vermilion-cutaneous junction of the upper and lower lips (baseline analysis)
+b)Model for video= another using a pre-trained transformer-based deep learning model called RepNet( deep learning model ) (Dwibedi et al, 2020), which automatically detects periodicity, and parses periodic and semi-periodic repetitions in video data.
+c)
+
+
+
+
+
+
+
+
+
+
+
+distances 
+1 dist btw region for left and right eye just below the eyebrows(18-27)
+3 distance btw first and last jaw points(1-17)
+4 width of the eye(left 37-40, right 43-46 )
+5 distance from the middle mouth point to the middle of the jaw point (63-9)
+6 dist from the outer eye corner to the head (18-1,27-17)
+7 dist from the outer eye corner to the middle mouth point (37-63, 46-63)
+8 dist from outer eye corner to the nose edge point (37-34, 46-34)
+9 dist from the nose edge point to the middle mouth point(34-67)
+10 avg of the 4 points within each eyebrow (left- (38-42)+(39+41)/2, right- (44-48)+(45-47)/2)
+11 dist btw upper and lower eyelids of both the eye (left- (38-42)+(39+41), right- (44-48)+(45-47))
+14 dist btw upper and lower lip of both sides of the mouth (51-59, 53-57)
+15 dist btw fourth eyebrow(left and right) point to the middle of the jaw (left 19-9, right 24-9)
+16 dist btw third eyebrow(left and right) point to the middle of the jaw (left 21-9, right 26-9)
+17 dist btw mouth corner to the outer middle point of the mouth(left and right) (58-49, 58-55)
+18 dist from the mouth corners. (49-55)
+19 dist from the middle nose tip to the outer middle point of the mouth.(31-49, 31-55)                             
+26 distance_right_eye_to_outer_eyebrow, (46-27)
+27 distance_right_eye_to_inner_eyebrow,  (43-23)      
+28 distance_left_eye_to_outer_eyebrow, (37-18) 
+29 distance_left_eye_to_inner_eyebrow,(40-22)
+30 distance_right_eye_to_right_mouth, (27-55)
+31 distance_left_eye_to_left_mouth (18-49)
+
